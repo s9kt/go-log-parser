@@ -15,22 +15,21 @@ cd go-log-parser
 go run .
 ```
 
+## Build
+
 Follow the same steps as above but do `go build .` to build a binary instead.
 
 ## Usage
-```
--aggregate string | Specify a variable to aggregate values of
+`log-parser [FLAGS]`
 
--file string | Path to the log file, can be omitted if passing stdin
-  
--filter string | Filter the log by field. field=value . When value has a space, enclose in quotes.
-  
--format string | The format of the log file (nginx | json | nginx-error) (default "nginx")
-  
--top int | Show only n entries. Only works with aggregate. n = -1 will print all aggregate values. Defaults to 10.
-  
--verbose | Show full output
-```
+| Flag | Type | Default | Description |
+|------|------|---------|-------------|
+| `-file` | string | stdin | Path to the log file |
+| `-format` | string | `nginx` | Log format (`nginx`, `nginx-error`, `json`) |
+| `-filter` | string | | Filter by field using `field=value` syntax |
+| `-aggregate` | string | | Field to aggregate and count |
+| `-top` | int | `10` | Limit aggregate output. Use `-1` for all results |
+| `-verbose` | bool | `false` | Print unparseable lines to stderr |
 
 ## Examples
 ```
