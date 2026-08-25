@@ -3,7 +3,7 @@
 ## Purpose
 Nginx log files are important as they can help diagnose issues, look for potential threat actors, and provide telemetry about your NGINX server. Scrolling through logs manually is quite inconvienient especially when dealing with hundreds of archived logs. To address this, I built a simple Go CLI to help make parsing these log files easier.
 
-This is a project I did to learn Go. There's probably something better than this that exists so uh don't take this too seriously. I built a log parser because I want to work on infrastructure security and observability.
+I built a log parser in particular because I want to work on infrastructure security and observability as a full time career.
 
 Test files sourced from my personal VPS's Nginx logs.
 
